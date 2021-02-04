@@ -5,11 +5,14 @@ package org.generation.blogPessoal.model;
 	import javax.persistence.GeneratedValue;
 	import javax.persistence.GenerationType;
 	import javax.persistence.Id;
-	import javax.persistence.Table;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 	import javax.persistence.Temporal;
 	import javax.persistence.TemporalType;
 	import javax.validation.constraints.NotNull;
 	import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 	//inserir anotações
 
@@ -33,6 +36,10 @@ package org.generation.blogPessoal.model;
 		@Temporal(TemporalType.TIMESTAMP)
 		private Date date = new java.sql.Date(System.currentTimeMillis());
 
+		@ManyToOne
+		@JsonIgnoreProperties ("postagens")
+		private Tema tema; 
+		
 		public long getId() {
 			return id;
 		}
@@ -64,6 +71,15 @@ package org.generation.blogPessoal.model;
 		public void setDate(Date date) {
 			this.date = date;
 		}
+		
+		public Tema getTema() {
+			return tema;
+		}
+
+		public void setTema(Tema tema) {
+			this.tema = tema;
+		}
+
 		
 	}
 
