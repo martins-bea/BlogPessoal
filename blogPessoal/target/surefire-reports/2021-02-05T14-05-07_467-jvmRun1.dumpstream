@@ -1,0 +1,21 @@
+# Created at 2021-02-05T14:05:16.926
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:396)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+# Created at 2021-02-05T14:05:16.971
+Unexpected IOException: 5,1,org.generation.blogPessoal.BlogPessoalApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2021-02-05T14:05:17.374
+Unexpected IOException: 6,1,org.generation.blogPessoal.BlogPessoalApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2021-02-05T14:05:17.380
+Unexpected IOException: 2,1,org.apache.maven.surefire.junitplatform.JUnitPlatformProvider,org.generation.blogPessoal.BlogPessoalApplicationTests,null,null,null
+
+
